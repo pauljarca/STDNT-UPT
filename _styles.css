@@ -330,7 +330,7 @@ u, .underline-body {
     margin-left: 240px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
     .page-content {
         margin-left: 0rem;
     }
@@ -353,6 +353,9 @@ u, .underline-body {
 #sidebar-wrapper{
     border-radius: 0 8px 8px 0;
 }
+.sidebar-heading {
+    border-radius: 0  8px 0 0;
+}
 
 .useful-link-shape {
     border-radius: 8px;
@@ -373,7 +376,6 @@ u, .underline-body {
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
-    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -408,6 +410,25 @@ u, .underline-body {
     filter: drop-shadow(0px 3px 4px rgba(46, 49, 146, 0.1));
 }
 
+@media (max-width: 768px) {
+    .menu-dashboard-element-shape {
+        width: 90px;
+        height: 90px;
+    }
+    .menu-dashboard-element{
+        width: 90px;
+    }
+    .useful-links-list {
+        justify-content: space-between;
+    }
+    .useful-link {
+        width: 60px;
+    }
+    .useful-link-shape {
+        width: 60px;
+        height: 60px;
+    }
+}
 .horizontal-scrollable > .row {
     overflow-x: auto;
     white-space: nowrap;
