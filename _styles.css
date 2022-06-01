@@ -347,7 +347,11 @@ u, .underline-body {
     margin: 5px;
     gap: 10px;
     width: 120px;
+}
 
+.hidden-link {
+    text-decoration: none;
+    color: var(--gray-900);
 }
 
 #sidebar-wrapper{
