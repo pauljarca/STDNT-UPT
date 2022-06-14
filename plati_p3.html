@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Plăți - Prezentarea 3 - Student UPT</title>
+  <link rel = "icon" href =
+          "resources/upt-logo.svg"
+        type = "image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="_styles.css">
+  <link rel="stylesheet" href="css/draganddrop.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end background-nav" id="sidebar-wrapper">
+    <div class="sidebar-heading border-bottom background-nav"><img src="resources/logo.svg" style="width: 50px"
+                                                                   alt="student_upt_logo"/></div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action menu-element p-3" href="main_page.html"><span
+              class="material-symbols-rounded">home</span>Pagina principală</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="discipline.html"><span
+              class="material-symbols-rounded">view_list</span>Discipline contractate</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="documente.html"><span
+              class="material-symbols-rounded">description</span>Documente</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded">credit_card</span>Bursă socială</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="plati_taxescolare.html"><span
+              class="material-symbols-rounded">paid</span>Plăți - Taxe școlare</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href=plati_taxecamin.html><span
+              class="material-symbols-rounded" >wallet</span>Plăți - Taxe cămin</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="plati_p3.html"><span
+              class="material-symbols-rounded" style="font-variation-settings: 'FILL' 1">payments</span><b>Plăți - Prezentarea 3</b></a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded">inventory</span>Evaluare discipline</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="solicitare_laptop.html"><span
+              class="material-symbols-rounded">laptop_windows</span>Solicitare laptop-uri</a>
+      <ul id="logout_sidebar_button" class="nav nav-sidebar">
+        <li><a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
+                class="material-symbols-rounded">logout</span>Deconectare</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-md navbar-light border-bottom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" id="sidebarToggle"><span class="material-symbols-rounded" style="font-variation-settings: 'opsz' 40; color: white">menu</span></button>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="page-content container-fluid container-width">
+      <div class="container">
+        <h1>Plăți - Prezentarea 3</h1>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th></th>
+              <th>#</th>
+              <th>Denumire disciplină</th>
+              <th>Formă evaluare</th>
+              <th>Credite</th>
+              <th>An studiu</th>
+              <th>Semestru</th>
+              <th>An de calcul</th>
+              <th>Cod departament</th>
+              <th>Taxă P3</th>
+              <th>Stare plată</th>
+              <th>Data plăţii</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Proiectarea interfeţelor utilizator şi grafică|3|5" id="Proiectarea interfeţelor utilizator şi grafică|3|5" data-dept="02" data-name="Proiectarea interfeţelor utilizator şi grafică" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>1</td>
+              <td>Proiectarea interfeţelor utilizator şi grafică</td>
+              <td>e</td>
+              <td>5</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>02</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="Medii şi tehnologii de programare|3|5" id="Medii şi tehnologii de programare|3|5" data-dept="02" data-name="Medii şi tehnologii de programare" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>2</td>
+              <td>Medii şi tehnologii de programare</td>
+              <td>e</td>
+              <td>5</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>02</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Limbaje formale şi tehnici de compilare|3|5" id="Limbaje formale şi tehnici de compilare|3|5" data-dept="01" data-name="Limbaje formale şi tehnici de compilare" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>3</td>
+              <td>Limbaje formale şi tehnici de compilare</td>
+              <td>e</td>
+              <td>5</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr  >
+              <td><input type="checkbox" name="Comunicare|3|5" id="Comunicare|3|5" data-dept="47" data-name="Comunicare" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>4</td>
+              <td>Comunicare</td>
+              <td>d</td>
+              <td>2</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>47</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Programare Web|3|5" id="Programare Web|3|5" data-dept="02" data-name="Programare Web" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>5</td>
+              <td>Programare Web</td>
+              <td>e</td>
+              <td>5</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>02</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr  >
+              <td><input type="checkbox" name="Proiect sincretic 2A|3|5" id="Proiect sincretic 2A|3|5" data-dept="01" data-name="Proiect sincretic 2A" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>6</td>
+              <td>Proiect sincretic 2A</td>
+              <td>d</td>
+              <td>3</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Proiectarea bazelor de date|3|5" id="Proiectarea bazelor de date|3|5" data-dept="01" data-name="Proiectarea bazelor de date" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>7</td>
+              <td>Proiectarea bazelor de date</td>
+              <td>d</td>
+              <td>5</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr  >
+              <td><input type="checkbox" name="Proiectarea aplicaţiilor pe platforme reconfigurabile|3|6" id="Proiectarea aplicaţiilor pe platforme reconfigurabile|3|6" data-dept="01" data-name="Proiectarea aplicaţiilor pe platforme reconfigurabile" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>8</td>
+              <td>Proiectarea aplicaţiilor pe platforme reconfigurabile</td>
+              <td>e</td>
+              <td>4</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Proiectarea translatoarelor|3|6" id="Proiectarea translatoarelor|3|6" data-dept="01" data-name="Proiectarea translatoarelor" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>9</td>
+              <td>Proiectarea translatoarelor</td>
+              <td>e</td>
+              <td>4</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr  >
+              <td><input type="checkbox" name="Programarea aplicaţiilor Multimedia|3|6" id="Programarea aplicaţiilor Multimedia|3|6" data-dept="02" data-name="Programarea aplicaţiilor Multimedia" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>10</td>
+              <td>Programarea aplicaţiilor Multimedia</td>
+              <td>d</td>
+              <td>4</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>02</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Sisteme încorporate|3|6" id="Sisteme încorporate|3|6" data-dept="01" data-name="Sisteme încorporate" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>11</td>
+              <td>Sisteme încorporate</td>
+              <td>e</td>
+              <td>4</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr  >
+              <td><input type="checkbox" name="Elaborare lucrare de licenţă|3|6" id="Elaborare lucrare de licenţă|3|6" data-dept="01" data-name="Elaborare lucrare de licenţă" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>12</td>
+              <td>Elaborare lucrare de licenţă</td>
+              <td>c</td>
+              <td>4</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="pure-table-odd" >
+              <td><input type="checkbox" name="Susţinere examen de licenţă|3|6" id="Susţinere examen de licenţă|3|6" data-dept="01" data-name="Susţinere examen de licenţă" data-tax="60" onclick="changetaxcheckbox(this);" /></td>
+              <td>13</td>
+              <td>Susţinere examen de licenţă</td>
+              <td>e</td>
+              <td>10</td>
+              <td>3</td>
+              <td>6</td>
+              <td>2021</td>
+              <td>01</td>
+              <td>60 lei</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+          <div id="taxscourses-wrapper" style="display: none; padding-bottom: 5em;">
+            <div>Obs.: Orice reclamație legată de situația financiară se transmite pe adresa <a href="mailto:plati-taxe@upt.ro">plati-taxe@upt.ro</a>.</div>
+            <div>
+              <input class="button primary-button" id="taxscourses_button" type="button" value="" onclick="payonline_tax();" />
+            </div>
+            <div>Vă rugăm să nu inchideţi pagina în timpul procesului de plată. După încheierea cu succes a procesului, pagina se va reîncărca. </div>
+          </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+</div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/taxcourses.js"></script>
+<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+</body>
+</html>

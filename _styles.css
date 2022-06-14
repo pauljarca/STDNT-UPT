@@ -17,7 +17,6 @@
     --black: #161619;
     --white: #FFFFFF;
     --font: 'Rubik';
-
 }
 @font-face {
     font-family: 'Rubik';
@@ -95,6 +94,7 @@ h1 {
     font-size: 52px;
     line-height: 60px;
     letter-spacing: -0.03em;
+    padding-top: 0.5em;
 }
 
 h2 {
@@ -241,10 +241,13 @@ u, .underline-body {
     justify-content: center;
     transition: ease-in;
     transition-duration: 0.2s;
+    text-decoration: none;
+    color: var(--gray-900);
 }
 
 .useful-link:hover {
     filter: drop-shadow(0px 3px 4px rgba(46, 49, 146, 0.1));
+    color: var(--upt-original);
 }
 
 .link-image{
@@ -432,6 +435,9 @@ u, .underline-body {
         width: 60px;
         height: 60px;
     }
+    .sidebar-heading {
+        border-radius: 0;
+    }
 }
 .horizontal-scrollable > .row {
     overflow-x: auto;
@@ -517,3 +523,4 @@ border-radius: 8px;
     gap: 30px;
     color: var(--gray-700);
 }
+
