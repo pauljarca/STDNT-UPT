@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Student UPT</title>
-    <link rel = "icon" href =
+    <link rel="icon" href=
             "resources/upt-logo.svg"
-          type = "image/x-icon">
+          type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="_styles.css">
     <link rel="stylesheet"
@@ -36,7 +36,7 @@
                     class="material-symbols-rounded">payments</span>Plăți - Prezentarea 3</a>
             <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
                     class="material-symbols-rounded">inventory</span>Evaluare discipline</a>
-            <a class="list-group-item list-group-item-action menu-element p-3"  href="solicitare_laptop.html"><span
+            <a class="list-group-item list-group-item-action menu-element p-3" href="solicitare_laptop.html"><span
                     class="material-symbols-rounded">laptop_windows</span>Solicitare laptop-uri</a>
             <ul id="logout_sidebar_button" class="nav nav-sidebar">
                 <li><a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
@@ -58,7 +58,7 @@
         <div class="page-content container-fluid container-width">
             <div class="container p-0">
                 <div class="container row homepage-section">
-                    <div class="col-lg-7 featured-info">
+                    <div class="col-lg-6 featured-info">
                         <h1>
                             Părerea ta contează!
                             Lasă un feedback
@@ -68,13 +68,22 @@
                         </div>
                         <button class="primary-button">Află mai multe</button>
                     </div>
-                    <div class="col-lg-5 about-me">
-                        <p class="text-section"> AC.LH6.01.3.LH614357</p>
-                        <h2>Cristian Bogdan Becșenescu</h2>
-                        <p>Facultatea de Automatică și Calculatoare<br>
-                            Număr matricol: LH612277<br>
-                            Anul 3
-                        </p>
+                    <div class="col-lg-6 about-me">
+                        <div class="profile-card">
+
+                                <div>
+                                    <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg, .svg">
+                                    <button id="upload-aphoto" class="profile-photo" style="background-image: url('resources/placeholders/student_photo.png')">Schimbă imaginea</button>
+                                </div>
+                            <div>
+                                <p class="text-section"> AC.LH6.01.3.LH614357</p>
+                                <h2>Cristian Bogdan Becșenescu</h2>
+                                <p>Facultatea de Automatică și Calculatoare<br>
+                                    Număr matricol: LH612277<br>
+                                    Anul 3
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -82,50 +91,58 @@
                     <div class="container col-lg-7 menu-section useful-links-list">
                         <a class="menu-dashboard-element hidden-link" href="discipline.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">view_list</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">view_list</span>
                             </div>
                             <div class="small-body" style="text-align: center">Discipline contractate</div>
                         </a>
                         <a class="hidden-link menu-dashboard-element" href="documente.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">description</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">description</span>
                             </div>
                             <div class="small-body" style="text-align: center">Documente</div>
                         </a>
                         <div class="menu-dashboard-element">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">credit_card</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">credit_card</span>
                             </div>
                             <div class="small-body" style="text-align: center">Bursă socială</div>
                         </div>
                         <a class="hidden-link menu-dashboard-element" href="plati_taxescolare.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">paid</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">paid</span>
                             </div>
                             <div class="small-body" style="text-align: center">Taxe școlare</div>
                         </a>
                         <a class="hidden-link menu-dashboard-element" href="plati_taxecamin.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">wallet</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">wallet</span>
                             </div>
                             <div class="small-body" style="text-align: center">Taxe cămin</div>
                         </a>
                         <a class="hidden-link menu-dashboard-element" href="plati_p3.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">payments</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">payments</span>
                             </div>
                             <div class="small-body" style="text-align: center">Prezentarea 3</div>
                         </a>
                         <div class="menu-dashboard-element">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">inventory</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">inventory</span>
                             </div>
                             <div class="small-body" style="text-align: center">Evaluare discipline</div>
                         </div>
 
                         <a class="hidden-link menu-dashboard-element" href="solicitare_laptop.html">
                             <div class="menu-dashboard-element-shape">
-                                <span class="material-symbols-rounded" style="font-size: 80px; font-variation-settings: 'wght' 100">laptop_windows</span>
+                                <span class="material-symbols-rounded"
+                                      style="font-size: 80px; font-variation-settings: 'wght' 100">laptop_windows</span>
                             </div>
                             <div class="small-body" style="text-align: center">Solicitare laptop-uri</div>
                         </a>
@@ -144,7 +161,7 @@
                                      style="background-image: url('resources/useful_links/ac.png')"></div>
                                 <div class="small-body" style="text-align: center">Facultate</div>
                             </a>
-                            <a class="useful-link" href="https://practica.ac.upt.ro">
+                            <a class="useful-link" href="http://practica.test:4207/ac">
                                 <div class="useful-link-shape"
                                      style="background-image: url('resources/useful_links/practica.png')"></div>
                                 <div class="small-body" style="text-align: center">Practica</div>
@@ -181,6 +198,30 @@
 </div>
 </div>
 </div>
+
+<div class="modal fade" id="imageModalContainer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content modal-content1 modal-content1">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModal">Schimbă imaginea de profil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-body1">
+                <div id='crop-image-container'>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn secondary-button" data-dismiss="modal">Renunță</button>
+                <button type="button" class="btn primary-button save-modal">Salvează</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="crop_image.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
