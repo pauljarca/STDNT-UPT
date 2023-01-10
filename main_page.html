@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Student UPT</title>
@@ -12,7 +13,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 </head>
-<body>
+<body onload="getBackgound()">
 <div class="d-flex" id="wrapper">
     <!-- Sidebar-->
     <div class="border-end background-nav" id="sidebar-wrapper">
@@ -38,9 +39,8 @@
                     class="material-symbols-rounded">inventory</span>Evaluare discipline</a>
             <a class="list-group-item list-group-item-action menu-element p-3" href="solicitare_laptop.html"><span
                     class="material-symbols-rounded">laptop_windows</span>Solicitare laptop-uri</a>
-            <ul id="logout_sidebar_button" class="nav nav-sidebar">
-                <li><a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
-                        class="material-symbols-rounded">logout</span>Deconectare</a></li>
+                <a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
+                        class="material-symbols-rounded">logout</span>Deconectare</a>
             </ul>
         </div>
     </div>
@@ -58,23 +58,24 @@
         <div class="page-content container-fluid container-width">
             <div class="container p-0">
                 <div class="container row homepage-section">
-                    <div class="col-lg-6 featured-info">
-                        <h1>
-                            Părerea ta contează!
-                            Lasă un feedback
+                    <div class="col-lg-6 featured-info" id="backgroundImage">
+                        <h1 style="color: white">
+                            Salut, Cristian!
                         </h1>
-                        <div class="regular-body">Evaluează disciplinele pe care le-ai avut semestrul trecut și spune-ne
-                            ce ți-a plăcut (sau nu).
+                        <div class="regular-body" style="color: white">Bine ai venit pe student.upt.ro!
                         </div>
-                        <button class="primary-button">Află mai multe</button>
+
                     </div>
                     <div class="col-lg-6 about-me">
                         <div class="profile-card">
 
-                                <div>
-                                    <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg, .svg">
-                                    <button id="upload-aphoto" class="profile-photo" style="background-image: url('resources/placeholders/student_photo.png')">Schimbă imaginea</button>
-                                </div>
+                            <div>
+                                <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg, .svg">
+                                <button id="upload-aphoto" class="profile-photo"
+                                        style="background-image: url('resources/placeholders/student_photo.png')">
+                                    Schimbă imaginea
+                                </button>
+                            </div>
                             <div>
                                 <p class="text-section"> AC.LH6.01.3.LH614357</p>
                                 <h2>Cristian Bogdan Becșenescu</h2>
@@ -224,5 +225,18 @@
 <script src="crop_image.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
+<script>
+
+    function getBackgound() {
+        let imagePath = ['resources/dashboard_backgrouds/bg1.png','resources/dashboard_backgrouds/bg2.png', 'resources/dashboard_backgrouds/bg3.png', 'resources/dashboard_backgrouds/bg4.png'];
+        $('#backgroundImage').css({
+            'background' : 'url('+ imagePath[Math.floor(Math.random() * imagePath.length)] + ') no-repeat',
+            'background-size': 'cover',
+        });
+    }
+    getBackgound();
+
+
+</script>
 </body>
 </html>

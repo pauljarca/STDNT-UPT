@@ -332,8 +332,9 @@ u, .underline-body {
     padding: 20px;
     margin: 10px;
     gap: 10px;
-
-    background: var(--white);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: var(--white);
     border-radius: 16px;
 }
 
