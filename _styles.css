@@ -584,6 +584,12 @@ th {
     display: none;
 }
 
+.close {
+    background-color: transparent;
+    color: var(--upt-original);
+    border: 0;
+}
+
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .profile-card {

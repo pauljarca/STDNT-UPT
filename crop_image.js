@@ -1,9 +1,9 @@
-$(document).on('click', 'selectedFile', function () {
+$('#upload-aphoto').on('click', document.getElementById('upload-aphoto'), function () {
     document.getElementById('selectedFile').click();
 });
 
 $('#selectedFile').change(function () {
-    if (this.files[0] == undefined)
+    if (this.files[0] === undefined)
         return;
     $('#imageModalContainer').modal('show');
     let reader = new FileReader();
@@ -19,7 +19,7 @@ $('#selectedFile').change(function () {
 let croppi;
 $('#imageModalContainer').on('shown.bs.modal', function () {
     let width = document.getElementById('crop-image-container').offsetWidth - 20;
-    $('#crop-image-container').height((width - 80) + 'px');
+    $('#crop-image-container').height((width) + 'px');
     croppi = $('#crop-image-container').croppie({
         viewport: {
             width: width,
@@ -28,6 +28,7 @@ $('#imageModalContainer').on('shown.bs.modal', function () {
         },
     });
     $('.modal-body1').height(document.getElementById('crop-image-container').offsetHeight + 50 + 'px');
+    console.log(document.getElementById('crop-image-container').offsetHeight);
     croppi.croppie('bind', {
         url: window.src,
     }).then(function () {
@@ -41,10 +42,10 @@ $('#imageModalContainer').on('hidden.bs.modal', function () {
 $(document).on('click', '.save-modal', function (ev) {
     croppi.croppie('result', {
         type: 'base64',
-        format: 'jpeg',
+        format: 'png',
         size: 'original'
     }).then(function (resp) {
-        $('#confirm-img').attr('src', resp);
         $('.modal').modal('hide');
+        $('#upload-aphoto').css('background-image', 'url(' + resp + ')');
     });
 });

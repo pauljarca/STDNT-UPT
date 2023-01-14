@@ -8,12 +8,13 @@
     <link rel="icon" href=
             "resources/upt-logo.svg"
           type="image/x-icon">
+    <link rel="stylesheet" href="croppie.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="_styles.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 </head>
-<body onload="getBackgound()">
+<body>
 <div class="d-flex" id="wrapper">
     <!-- Sidebar-->
     <div class="border-end background-nav" id="sidebar-wrapper">
@@ -39,8 +40,8 @@
                     class="material-symbols-rounded">inventory</span>Evaluare discipline</a>
             <a class="list-group-item list-group-item-action menu-element p-3" href="solicitare_laptop.html"><span
                     class="material-symbols-rounded">laptop_windows</span>Solicitare laptop-uri</a>
-                <a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
-                        class="material-symbols-rounded">logout</span>Deconectare</a>
+            <a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
+                    class="material-symbols-rounded">logout</span>Deconectare</a>
             </ul>
         </div>
     </div>
@@ -69,8 +70,8 @@
                     <div class="col-lg-6 about-me">
                         <div class="profile-card">
 
-                            <div>
-                                <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg, .svg">
+                            <div class="container-form">
+                                <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg">
                                 <button id="upload-aphoto" class="profile-photo"
                                         style="background-image: url('resources/placeholders/student_photo.png')">
                                     Schimbă imaginea
@@ -89,7 +90,7 @@
                 </div>
 
                 <div class="container row homepage-section-2">
-                    <div class="container col-lg-7 menu-section useful-links-list">
+                    <div class="container col-lg-6 menu-section useful-links-list">
                         <a class="menu-dashboard-element hidden-link" href="discipline.html">
                             <div class="menu-dashboard-element-shape">
                                 <span class="material-symbols-rounded"
@@ -149,7 +150,7 @@
                         </a>
 
                     </div>
-                    <div class="container col-lg-5 featured-info">
+                    <div class="container col-lg-6 featured-info">
                         <div class="text-section">Link-uri utile</div>
                         <div class="container useful-links-list">
                             <a class="useful-link" href="https://cv.upt.ro">
@@ -196,9 +197,6 @@
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
 
 <div class="modal fade" id="imageModalContainer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
@@ -206,7 +204,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="imageModal">Schimbă imaginea de profil</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span class="material-symbols-rounded">close</span>
                 </button>
             </div>
             <div class="modal-body modal-body1">
@@ -222,18 +220,20 @@
     </div>
 </div>
 
+<script src="croppie.js"></script>
 <script src="crop_image.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 <script>
 
     function getBackgound() {
-        let imagePath = ['resources/dashboard_backgrouds/bg1.png','resources/dashboard_backgrouds/bg2.png', 'resources/dashboard_backgrouds/bg3.png', 'resources/dashboard_backgrouds/bg4.png'];
+        let imagePath = ['resources/dashboard_backgrouds/bg1.png', 'resources/dashboard_backgrouds/bg2.png', 'resources/dashboard_backgrouds/bg3.png', 'resources/dashboard_backgrouds/bg4.png'];
         $('#backgroundImage').css({
-            'background' : 'url('+ imagePath[Math.floor(Math.random() * imagePath.length)] + ') no-repeat',
+            'background': 'url(' + imagePath[Math.floor(Math.random() * imagePath.length)] + ') no-repeat',
             'background-size': 'cover',
         });
     }
+
     getBackgound();
 
 
