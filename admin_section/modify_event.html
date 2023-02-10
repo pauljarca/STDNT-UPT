@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>Solicitare laptop-uri - Student UPT</title>
+  <link rel="icon" href=
+          "../resources/upt-logo.svg"
+        type="image/x-icon">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../_styles.css">
+  <link rel="stylesheet" href="../_event_style.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end background-nav" id="sidebar-wrapper">
+    <div class="sidebar-heading border-bottom background-nav"><img src="../resources/logo.svg" style="width: 50px"
+                                                                   alt="student_upt_logo"/></div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded">credit_card</span>Bursă socială</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded">paid</span>Eveniment 2</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded">wallet</span>Eveniment 3</a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="#!"><span
+              class="material-symbols-rounded" style="font-variation-settings: 'FILL' 1">add</span><b>Creează
+        eveniment</b></a>
+      <a class="list-group-item list-group-item-action menu-element p-3" href="login.html"><span
+              class="material-symbols-rounded">logout</span>Deconectare</a>
+      </ul>
+    </div>
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-md navbar-light border-bottom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" id="sidebarToggle"><span class="material-symbols-rounded"
+                                                                style="font-variation-settings: 'opsz' 40; color: white">menu</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="page-content container-fluid container-width">
+      <div class="container row">
+        <div class="col-lg-8">
+          <h1>Creează un eveniment</h1>
+          <br/>
+          <!-- nume event, iconita, start date, end date, descriere, lista elemente -->
+          <div class="form-floating mb-3">
+            <input type="type" class="form-control" id="eventName" placeholder="ex. Bursă socială">
+            <label for="eventName">Nume eveniment</label>
+            <p class="opacity-50"><br/>Se recomandă folosirea unor titluri scurte</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="type" class="form-control" id="iconName" placeholder="ex. wallet"
+                   onchange="displayValue()">
+            <label for="iconName">Iconiță eveniment</label>
+
+            <p class="opacity-50"><br/>Iconițele utilizate sunt Material Icons de la Google, se cauta
+              iconiță
+              sugestivă de <a href="https://fonts.google.com/icons">aici</a>. Se selectează, se dă scroll
+              până
+              la inserting the icon și se introduce denumirea dintre &lt;span&gt;<b>icon_name</b>&lt;/span&gt;
+            </p></div>
+          <div>
+            <label for="start">Activ de la data</label>
+            <input type="date" id="start" name="event-start"
+                   min=today max="2030-12-31">
+            <label for="start">pana la</label>
+            <input type="date" id="end" name="event-end"
+                   min=today max="2030-12-31">
+          </div>
+          <br/>
+          <h5>Descriere eveniment</h5>
+          <textarea id="default-editor">
+                    </textarea>
+          <div><br/>
+            <h5>Incarcare documente</h5>
+            <button class="primary-button">Încarcă documente</button>
+          </div>
+          <p class="opacity-50"><br/><i>Au fost încărcate 0 documente. <a href="!#">Elimină documente</a></i>
+          </p>
+        </div>
+        <div><br/>
+          <h5>Elemente</h5>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <th>Nume</th>
+              <th>Tip</th>
+              <th>Obligatoriu?</th>
+              <th>Observații</th>
+              </thead>
+              <tr>
+                <td><b>Categorie bursa</b></label></td>
+                <td>Listă</td>
+                <td>da</td>
+                <td>a, b, c, d</td>
+              </tr>
+              <tr>
+                <td><b>Anexa 13: Adeverință</b></label></td>
+                <td>fișier</td>
+                <td>da</td>
+                <td>-</td>
+              </tr>
+            </table>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="col-lg-8">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="options" id="option1"
+                       value="Document">
+                <label class="form-check-label" for="option1">Document</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="options" id="option2" value="Listă">
+                <label class="form-check-label" for="option2">Listă</label>
+              </div>
+              <button class="secondary-button d-inline-block" id="addElementButton">Adaugă un element
+              </button>
+              <br/><br/>
+            </div>
+          </div>
+          <button class="primary-button">Salvează modificările</button>
+          <br/><br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../js/bootstrap.min.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/draganddrop.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+  tinymce.init({
+    selector: 'textarea#default-editor'
+  });
+
+  document.getElementById("addElementButton").addEventListener("click", function () {
+    let selectedOption = document.querySelector('input[name="options"]:checked').value;
+
+    if (selectedOption === "Document") {
+      $("#documentModal").modal("show");
+    } else if (selectedOption === "Listă") {
+      $("#listModal").modal("show");
+    }
+  });
+
+  window.addEventListener('load', function () {
+    const addDocumentBtn = document.getElementById('addDocument');
+    addDocumentBtn.addEventListener('click', function () {
+      document.getElementById("addDocument").addEventListener("click", function () {
+        // get the values from the modal form
+        let name = document.getElementById("documentName").value;
+        let isRequired = document.getElementById("exampleCheck1").checked;
+
+        // get a reference to the table
+        let table = document.querySelector(".table");
+
+        // insert a new row into the table
+        let row = table.insertRow();
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+
+        // set the values of the cells
+        cell1.innerHTML = name;
+        cell2.innerHTML = "Document";
+        cell3.innerHTML = isRequired ? "da" : "nu";
+        cell4.innerHTML = "";
+      });
+
+    });
+  });
+
+
+</script>
+<!-- Modal for Document -->
+<div class="modal" id="documentModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Adaugă document</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="documentName">Nume document</label>
+            <input type="text" class="form-control" id="documentName" placeholder="Nume document">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Obligatoriu</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="secondary-button" data-dismiss="modal">Anulează</button>
+        <button type="button" class="primary-button" id="addDocument">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for List -->
+<div class="modal" id="listModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Adaugă listă</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="listName">Nume listă</label>
+            <input type="text" class="form-control" id="listName" placeholder="Nume">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck2">
+              <label class="form-check-label" for="exampleCheck1">Obligatoriu</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="secondary-button" data-dismiss="modal">Anulează</button>
+        <button type="button" class="primary-button" id="addList">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
